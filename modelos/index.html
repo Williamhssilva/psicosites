@@ -78,6 +78,35 @@
             border-color: #E8673C;
         }
         
+        /* Card em destaque */
+        .model-card.featured {
+            border: 2px solid #E8673C;
+            background: linear-gradient(135deg, #1a1a1e 0%, #251a17 100%);
+            position: relative;
+        }
+        
+        .model-card.featured::before {
+            content: '⭐ RECOMENDADO';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #E8673C 0%, #FF7A4D 100%);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(232, 103, 60, 0.4);
+        }
+        
+        .model-card.featured:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 100px rgba(232, 103, 60, 0.25);
+        }
+        
         .model-preview {
             aspect-ratio: 16/10;
             background: linear-gradient(135deg, #232328 0%, #1a1a1e 100%);
@@ -304,6 +333,33 @@
         </div>
         
         <div class="models-grid">
+            <!-- Modelo 4: Florescer (DESTAQUE - PRIMEIRO) -->
+            <div class="model-card featured">
+                <div class="model-preview">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=375&fit=crop" alt="Flores e natureza">
+                    <span class="preview-badge">Hippie Moderno</span>
+                    <div class="preview-colors">
+                        <div class="color-dot florescer-1"></div>
+                        <div class="color-dot florescer-2"></div>
+                        <div class="color-dot florescer-3"></div>
+                    </div>
+                </div>
+                <div class="model-content">
+                    <span class="model-number">Modelo 04</span>
+                    <h2 class="model-name">Florescer</h2>
+                    <p class="model-description">Orgânico e inovador, com formas fluidas, layout assimétrico e elementos naturais. Um design contemporâneo que conecta crescimento pessoal com natureza. Inclui página de currículo profissional!</p>
+                    <div class="model-tags">
+                        <span class="tag">Orgânico</span>
+                        <span class="tag">Inovador</span>
+                        <span class="tag">Natureza</span>
+                        <span class="tag">+ Currículo</span>
+                    </div>
+                    <div class="model-actions">
+                        <a href="modelo-4-florescer/index.html" class="btn btn-primary">Ver Modelo</a>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Modelo 1: Terra -->
             <div class="model-card">
                 <div class="model-preview">
@@ -378,32 +434,6 @@
                     </div>
                     <div class="model-actions">
                         <a href="modelo-3-aurora/index.html" class="btn btn-primary">Ver Modelo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Modelo 4: Florescer -->
-            <div class="model-card">
-                <div class="model-preview">
-                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=375&fit=crop" alt="Flores e natureza">
-                    <span class="preview-badge">Hippie Moderno</span>
-                    <div class="preview-colors">
-                        <div class="color-dot florescer-1"></div>
-                        <div class="color-dot florescer-2"></div>
-                        <div class="color-dot florescer-3"></div>
-                    </div>
-                </div>
-                <div class="model-content">
-                    <span class="model-number">Modelo 04</span>
-                    <h2 class="model-name">Florescer</h2>
-                    <p class="model-description">Orgânico e inovador, com formas fluidas, layout assimétrico e elementos naturais. Um design contemporâneo que conecta crescimento pessoal com natureza.</p>
-                    <div class="model-tags">
-                        <span class="tag">Orgânico</span>
-                        <span class="tag">Inovador</span>
-                        <span class="tag">Natureza</span>
-                    </div>
-                    <div class="model-actions">
-                        <a href="modelo-4-florescer/index.html" class="btn btn-primary">Ver Modelo</a>
                     </div>
                 </div>
             </div>
