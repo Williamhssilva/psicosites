@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 5: Métricas e Otimização | Tráfego Pago para Psicólogos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/course.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="nav-back">← Voltar ao Curso</a>
+        <span class="nav-module">Módulo 5 de 5</span>
+    </nav>
+    
+    <div class="container">
+        <header class="module-header">
+            <span class="module-badge">Módulo 05</span>
+            <h1>Métricas e <span>Otimização</span></h1>
+            <p class="module-subtitle">Entenda os números das suas campanhas e aprenda a otimizar para melhores resultados. CPC, CTR, conversões e ROI explicados de forma simples.</p>
+            
+            <div class="module-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">⏱️</span>
+                    <span>25 min de leitura</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📚</span>
+                    <span>6 tópicos</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📊</span>
+                    <span>Analítico</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-wrapper">
+            <aside class="table-of-contents">
+                <h3>Neste Módulo</h3>
+                <ul>
+                    <li><a href="#por-que">Por Que Analisar?</a></li>
+                    <li><a href="#metricas">Métricas Principais</a></li>
+                    <li><a href="#interpretar">Como Interpretar</a></li>
+                    <li><a href="#otimizar">Otimizando Campanhas</a></li>
+                    <li><a href="#erros">Erros Comuns</a></li>
+                    <li><a href="#rotina">Rotina de Análise</a></li>
+                </ul>
+            </aside>
+            
+            <main class="content">
+                <section id="por-que" class="content-section">
+                    <h2>Por Que Analisar Métricas?</h2>
+                    
+                    <p>Tráfego pago sem análise é jogar dinheiro fora. As métricas te dizem:</p>
+                    
+                    <ul>
+                        <li><strong>O que está funcionando</strong> (para fazer mais)</li>
+                        <li><strong>O que não está funcionando</strong> (para ajustar ou pausar)</li>
+                        <li><strong>Onde investir mais</strong> (para escalar resultados)</li>
+                        <li><strong>Seu retorno sobre investimento</strong> (ROI)</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <div class="info-icon">💡</div>
+                        <div class="info-content">
+                            <h4>Mentalidade Correta</h4>
+                            <p>Não existe campanha perfeita de primeira. O processo é: criar → medir → aprender → ajustar → repetir. Cada campanha te ensina algo para a próxima.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="metricas" class="content-section">
+                    <h2>Métricas Principais</h2>
+                    
+                    <p>Vamos desmistificar as siglas mais importantes:</p>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-abbr">CPM</div>
+                            <div class="metric-name">Custo por Mil Impressões</div>
+                            <div class="metric-desc">Quanto você paga para seu anúncio ser mostrado 1.000 vezes</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-abbr">CPC</div>
+                            <div class="metric-name">Custo por Clique</div>
+                            <div class="metric-desc">Quanto você paga cada vez que alguém clica no anúncio</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-abbr">CTR</div>
+                            <div class="metric-name">Taxa de Clique</div>
+                            <div class="metric-desc">% de pessoas que viram e clicaram (Cliques ÷ Impressões)</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-abbr">CPL</div>
+                            <div class="metric-name">Custo por Lead</div>
+                            <div class="metric-desc">Quanto você paga por cada contato/cadastro gerado</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-abbr">CPA</div>
+                            <div class="metric-name">Custo por Aquisição</div>
+                            <div class="metric-desc">Quanto você paga por cada paciente conquistado</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-abbr">ROAS</div>
+                            <div class="metric-name">Retorno sobre Investimento</div>
+                            <div class="metric-desc">Receita gerada ÷ Valor investido em anúncios</div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="font-size: 1.2rem; margin: 24px 0 16px; color: #f1f5f9;">Métricas por Plataforma</h3>
+                    
+                    <div class="comparison-table">
+                        <div class="table-column pode">
+                            <h4>🔍 Google Ads</h4>
+                            <ul>
+                                <li><strong>Impressões:</strong> Quantas vezes apareceu</li>
+                                <li><strong>Cliques:</strong> Quantos clicaram</li>
+                                <li><strong>CTR:</strong> Taxa de clique</li>
+                                <li><strong>CPC Médio:</strong> Custo por clique</li>
+                                <li><strong>Conversões:</strong> Ações completadas</li>
+                                <li><strong>Custo/Conversão:</strong> CPA</li>
+                                <li><strong>Índice de Qualidade:</strong> Nota do Google (1-10)</li>
+                            </ul>
+                        </div>
+                        <div class="table-column nao-pode" style="border-color: rgba(129, 140, 248, 0.3);">
+                            <h4 style="color: #818cf8;">📱 Meta Ads</h4>
+                            <ul>
+                                <li><strong>Alcance:</strong> Pessoas únicas alcançadas</li>
+                                <li><strong>Impressões:</strong> Total de visualizações</li>
+                                <li><strong>Frequência:</strong> Média de vezes que cada pessoa viu</li>
+                                <li><strong>Engajamento:</strong> Curtidas, comentários, compartilhamentos</li>
+                                <li><strong>Cliques no link:</strong> Cliques que saíram do app</li>
+                                <li><strong>CTR:</strong> Taxa de clique</li>
+                                <li><strong>CPR:</strong> Custo por resultado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="interpretar" class="content-section">
+                    <h2>Como Interpretar os Números</h2>
+                    
+                    <p>Mais importante que conhecer as métricas é saber o que fazer com elas:</p>
+                    
+                    <div class="types-list">
+                        <div class="type-item">
+                            <div class="type-number">📊</div>
+                            <div class="type-content">
+                                <h4>CTR Baixo (< 1% Google, < 0.5% Meta)</h4>
+                                <p><strong>Problema:</strong> As pessoas veem mas não clicam.<br>
+                                <strong>Causa provável:</strong> Anúncio não está atraente ou relevante para o público.<br>
+                                <strong>Solução:</strong> Teste novos títulos/imagens, revise o público-alvo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-item">
+                            <div class="type-number">💰</div>
+                            <div class="type-content">
+                                <h4>CPC Alto (> R$ 5-8 para psicologia)</h4>
+                                <p><strong>Problema:</strong> Cada clique está custando muito.<br>
+                                <strong>Causa provável:</strong> Muita concorrência ou baixa qualidade do anúncio.<br>
+                                <strong>Solução:</strong> Melhore o índice de qualidade, teste palavras-chave menos concorridas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-item">
+                            <div class="type-number">🚪</div>
+                            <div class="type-content">
+                                <h4>Muitos Cliques, Poucos Contatos</h4>
+                                <p><strong>Problema:</strong> Pessoas chegam ao site mas não entram em contato.<br>
+                                <strong>Causa provável:</strong> Site não está convincente ou dificulta o contato.<br>
+                                <strong>Solução:</strong> Melhore a página de destino, facilite o contato (WhatsApp visível).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-item">
+                            <div class="type-number">📉</div>
+                            <div class="type-content">
+                                <h4>Frequência Alta (> 3 no Meta)</h4>
+                                <p><strong>Problema:</strong> As mesmas pessoas estão vendo seu anúncio muitas vezes.<br>
+                                <strong>Causa provável:</strong> Público pequeno demais ou campanha rodando há muito tempo.<br>
+                                <strong>Solução:</strong> Amplie o público ou renove os criativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-box">
+                        <h4>📐 Referências para Psicólogos</h4>
+                        <p>Valores aproximados para você ter uma base:<br><br>
+                        • <strong>CTR Google (Pesquisa):</strong> 3-7% é bom<br>
+                        • <strong>CTR Meta:</strong> 0.8-2% é bom<br>
+                        • <strong>CPC Google:</strong> R$ 2-6 é aceitável<br>
+                        • <strong>CPC Meta:</strong> R$ 0.80-2.50 é aceitável<br>
+                        • <strong>Taxa de conversão site:</strong> 3-10% (cliques → contatos)</p>
+                    </div>
+                </section>
+                
+                <section id="otimizar" class="content-section">
+                    <h2>Otimizando Suas Campanhas</h2>
+                    
+                    <p>Agora que você sabe ler os números, veja como melhorar os resultados:</p>
+                    
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Pause o que Não Funciona</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Depois de 7-14 dias e pelo menos 100 cliques:</p>
+                            <ul>
+                                <li>Pause palavras-chave com CTR < 1% e nenhuma conversão</li>
+                                <li>Pause anúncios com performance muito abaixo dos outros</li>
+                                <li>Pause públicos que não geram resultados</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Aumente o Que Funciona</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Identifique seus melhores performers:</p>
+                            <ul>
+                                <li>Quais palavras-chave têm melhor custo/conversão?</li>
+                                <li>Quais anúncios têm melhor CTR?</li>
+                                <li>Quais públicos convertem mais?</li>
+                                <li>Aumente orçamento nesses elementos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Teste Continuamente</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Nunca pare de testar:</p>
+                            <ul>
+                                <li>Novos títulos e descrições</li>
+                                <li>Novas imagens e vídeos</li>
+                                <li>Diferentes públicos</li>
+                                <li>Horários e dias diferentes</li>
+                                <li>Novas palavras-chave</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Adicione Palavras-Chave Negativas</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Revise o relatório de termos de pesquisa semanalmente:</p>
+                            <ul>
+                                <li>Veja por quais termos seus anúncios apareceram</li>
+                                <li>Adicione como negativas os termos irrelevantes</li>
+                                <li>Isso melhora a qualidade dos cliques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <h3 class="step-title">Otimize a Página de Destino</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Não adianta ter anúncios bons se o site não converte:</p>
+                            <ul>
+                                <li>Carregamento rápido (< 3 segundos)</li>
+                                <li>Botão de WhatsApp visível</li>
+                                <li>Informações claras (CRP, abordagem, local)</li>
+                                <li>Formulário simples</li>
+                                <li>Mobile-friendly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="erros" class="content-section">
+                    <h2>Erros Comuns a Evitar</h2>
+                    
+                    <p>Não cometa esses erros que vejo frequentemente:</p>
+                    
+                    <div class="cfp-points">
+                        <div class="cfp-point">
+                            <h4>❌ Desistir Rápido Demais</h4>
+                            <p>Campanhas precisam de tempo para o algoritmo aprender. Dê pelo menos 7-14 dias antes de concluir que não funciona.</p>
+                        </div>
+                        
+                        <div class="cfp-point">
+                            <h4>❌ Não Acompanhar Conversões</h4>
+                            <p>Se você não rastreia quem veio dos anúncios, não sabe se está funcionando. Configure conversões no Google Ads e Pixel do Facebook.</p>
+                        </div>
+                        
+                        <div class="cfp-point">
+                            <h4>❌ Orçamento Muito Baixo</h4>
+                            <p>Com R$ 5/dia você não terá dados suficientes para otimizar. Melhor investir R$ 30-40/dia por 2 semanas do que R$ 5/dia por 2 meses.</p>
+                        </div>
+                        
+                        <div class="cfp-point">
+                            <h4>❌ Ignorar o Celular</h4>
+                            <p>80%+ dos acessos vêm do celular. Se seu site não funciona bem no mobile, você está jogando dinheiro fora.</p>
+                        </div>
+                        
+                        <div class="cfp-point">
+                            <h4>❌ Não Responder Rápido</h4>
+                            <p>Lead que não é respondido em até 1 hora perde muito valor. Tenha um processo para responder rápido.</p>
+                        </div>
+                        
+                        <div class="cfp-point">
+                            <h4>❌ Mudar Tudo de Uma Vez</h4>
+                            <p>Se você muda anúncio, público e orçamento ao mesmo tempo, não sabe o que causou a mudança nos resultados. Mude uma coisa por vez.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="rotina" class="content-section">
+                    <h2>Rotina de Análise</h2>
+                    
+                    <p>Estabeleça uma rotina para não esquecer de acompanhar:</p>
+                    
+                    <div class="types-list">
+                        <div class="type-item">
+                            <div class="type-number">📅</div>
+                            <div class="type-content">
+                                <h4>Diariamente (5 min)</h4>
+                                <p>Verifique se as campanhas estão rodando, se houve gasto anormal, se chegaram novos leads.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-item">
+                            <div class="type-number">📊</div>
+                            <div class="type-content">
+                                <h4>Semanalmente (30 min)</h4>
+                                <p>Revise CTR, CPC, conversões. Pause o que não funciona. Revise termos de pesquisa. Adicione negativas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-item">
+                            <div class="type-number">📈</div>
+                            <div class="type-content">
+                                <h4>Mensalmente (1 hora)</h4>
+                                <p>Análise completa: ROI, custo por paciente, melhores canais. Planeje testes para o próximo mês.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-box">
+                        <div class="success-icon">🎓</div>
+                        <div class="success-content">
+                            <h4>Parabéns! Você Concluiu o Mini Curso</h4>
+                            <p>Agora você tem o conhecimento básico para criar e gerenciar campanhas de tráfego pago de forma ética e eficiente. Lembre-se: comece pequeno, aprenda com os dados, e vá melhorando com o tempo!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-box">
+                        <h4>📚 Próximos Passos</h4>
+                        <ul>
+                            <li>Crie sua primeira campanha no Google Ads (Módulo 2)</li>
+                            <li>Configure uma campanha de conteúdo no Instagram (Módulo 3)</li>
+                            <li>Desenvolva uma isca digital para captar leads (Módulo 4)</li>
+                            <li>Estabeleça sua rotina de análise semanal (Este módulo)</li>
+                            <li>Continue estudando - marketing digital evolui constantemente</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="module-footer">
+                    <div class="progress-info">
+                        <span>🎉 Curso Completo!</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <a href="../modulo-4-topo-funil/index.html" class="nav-btn secondary">← Módulo Anterior</a>
+                        <a href="../index.html" class="nav-btn primary">Voltar ao Início →</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.table-of-contents a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('.table-of-contents a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
