@@ -1,0 +1,224 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    CONTRATO DE PRESTAÇÃO DE SERVIÇOS
+                         DESENVOLVIMENTO DE WEBSITE
+═══════════════════════════════════════════════════════════════════════════════
+
+
+CONTRATANTE:
+Nome: _________________________________________________________________
+CPF/CNPJ: _____________________________________________________________
+Endereço: _____________________________________________________________
+E-mail: ____________________________ Telefone: ________________________
+
+
+CONTRATADO:
+Nome: _________________________________________________________________
+CPF/CNPJ: _____________________________________________________________
+Endereço: _____________________________________________________________
+E-mail: ____________________________ Telefone: ________________________
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 1ª - OBJETO DO CONTRATO
+───────────────────────────────────────────────────────────────────────────────
+
+O presente contrato tem como objeto a prestação de serviços de criação e 
+desenvolvimento de website, conforme especificações abaixo:
+
+Tipo de site: ( ) Landing Page   ( ) Site Institucional   ( ) Outro: ________
+
+Quantidade de páginas: _____
+
+Páginas incluídas:
+( ) Home
+( ) Sobre
+( ) Serviços
+( ) Contato
+( ) Blog
+( ) Outras: _______________________________________________________________
+
+Funcionalidades incluídas:
+( ) Design responsivo (desktop + mobile)
+( ) Formulário de contato
+( ) Integração com WhatsApp
+( ) Otimização SEO básica
+( ) Outras: _______________________________________________________________
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 2ª - VALOR E FORMA DE PAGAMENTO
+───────────────────────────────────────────────────────────────────────────────
+
+Valor total do projeto: R$ _______________
+
+Forma de pagamento:
+( ) À vista, com ___% de desconto
+( ) ___% de entrada + ___% na entrega
+( ) Parcelado em ___ vezes de R$ _______________
+
+Entrada (se houver): R$ _______________ 
+Data de pagamento da entrada: ___/___/______
+
+Saldo restante: R$ _______________
+Data de pagamento do saldo: Na entrega do projeto
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 3ª - PRAZO DE ENTREGA
+───────────────────────────────────────────────────────────────────────────────
+
+O prazo estimado para conclusão do projeto é de _____ dias úteis, contados 
+a partir da data de recebimento de TODOS os materiais necessários 
+(textos, imagens, logo, etc.) e do pagamento da entrada.
+
+PARÁGRAFO ÚNICO: O prazo poderá ser prorrogado nas seguintes situações:
+a) Atraso no envio de materiais pelo CONTRATANTE;
+b) Solicitação de alterações que excedam o escopo original;
+c) Demora superior a 5 dias úteis no feedback do CONTRATANTE.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 4ª - REVISÕES
+───────────────────────────────────────────────────────────────────────────────
+
+O projeto inclui _____ rodadas de revisões sem custo adicional.
+
+Considera-se "revisão" qualquer alteração de layout, cores, textos ou 
+disposição de elementos solicitada pelo CONTRATANTE após apresentação 
+da primeira versão.
+
+Revisões adicionais serão cobradas à parte, no valor de R$ _____ por 
+rodada de alterações.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 5ª - OBRIGAÇÕES DO CONTRATANTE
+───────────────────────────────────────────────────────────────────────────────
+
+O CONTRATANTE se compromete a:
+
+a) Fornecer todos os materiais necessários (logo, fotos, textos) no prazo 
+   máximo de _____ dias após a assinatura deste contrato;
+
+b) Responder às solicitações e aprovações em até 5 dias úteis;
+
+c) Efetuar os pagamentos nas datas acordadas;
+
+d) Fornecer informações verdadeiras sobre seu negócio;
+
+e) Providenciar registro de domínio e hospedagem, quando não inclusos.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 6ª - OBRIGAÇÕES DO CONTRATADO
+───────────────────────────────────────────────────────────────────────────────
+
+O CONTRATADO se compromete a:
+
+a) Desenvolver o website conforme especificações acordadas;
+
+b) Cumprir o prazo de entrega, salvo exceções previstas na Cláusula 3ª;
+
+c) Realizar as revisões inclusas sem custo adicional;
+
+d) Prestar suporte técnico durante o período de desenvolvimento;
+
+e) Entregar os arquivos e acessos ao CONTRATANTE após conclusão.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 7ª - NÃO INCLUSO NO PROJETO
+───────────────────────────────────────────────────────────────────────────────
+
+NÃO estão incluídos neste contrato e serão cobrados à parte:
+
+( ) Registro de domínio
+( ) Hospedagem do site
+( ) Criação de logotipo
+( ) Sessão fotográfica profissional
+( ) Redação de textos e conteúdos
+( ) Manutenção após entrega
+( ) Outros: _______________________________________________________________
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 8ª - PROPRIEDADE INTELECTUAL
+───────────────────────────────────────────────────────────────────────────────
+
+Após o pagamento integral, todos os direitos sobre o website desenvolvido 
+serão transferidos ao CONTRATANTE, incluindo arquivos, códigos e design.
+
+O CONTRATADO poderá utilizar imagens do projeto para fins de portfólio, 
+desde que não revele informações confidenciais do CONTRATANTE.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 9ª - CANCELAMENTO E RESCISÃO
+───────────────────────────────────────────────────────────────────────────────
+
+Em caso de cancelamento por parte do CONTRATANTE:
+
+a) Antes do início do projeto: devolução de 80% do valor pago;
+b) Após início do projeto: não haverá devolução de valores, pois cobrem 
+   o trabalho já realizado.
+
+Em caso de descumprimento por parte do CONTRATADO:
+
+a) Devolução integral dos valores pagos;
+b) Entrega dos arquivos parcialmente desenvolvidos.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 10ª - CONFIDENCIALIDADE
+───────────────────────────────────────────────────────────────────────────────
+
+As partes se comprometem a manter sigilo sobre informações confidenciais 
+compartilhadas durante a execução deste contrato.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 11ª - FORO
+───────────────────────────────────────────────────────────────────────────────
+
+Fica eleito o foro da cidade de _________________________, Estado de 
+_____________, para dirimir quaisquer dúvidas ou litígios decorrentes 
+deste contrato.
+
+
+───────────────────────────────────────────────────────────────────────────────
+CLÁUSULA 12ª - DISPOSIÇÕES GERAIS
+───────────────────────────────────────────────────────────────────────────────
+
+Este contrato é celebrado em caráter irrevogável e irretratável, obrigando 
+as partes e seus sucessores.
+
+Alterações neste contrato só terão validade se feitas por escrito e 
+assinadas por ambas as partes.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Local e data: ___________________________, _____ de _____________ de _______
+
+
+_________________________________          _________________________________
+        CONTRATANTE                                 CONTRATADO
+   Nome:                                      Nome:
+   CPF:                                       CPF:
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                           TERMO DE ACEITE DIGITAL
+                        (Para contratos via WhatsApp/E-mail)
+
+Eu, _______________________________________, CPF _________________________,
+declaro que li, entendi e aceito todas as condições deste contrato.
+
+Data do aceite: ___/___/______
+
+( ) Aceito os termos - confirmado via WhatsApp em ___/___/______
+( ) Aceito os termos - confirmado via e-mail em ___/___/______
+
+═══════════════════════════════════════════════════════════════════════════════
+

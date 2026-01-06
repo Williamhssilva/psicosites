@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Site - Letícia Oliveira | Psicóloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #1a1a1e 0%, #0d0d0f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+        
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #E8673C 0%, #FF7A4D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #9898A4;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+        
+        .model-card {
+            background: #1a1a1e;
+            border: 1px solid #2e2e35;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(232, 103, 60, 0.15);
+            border-color: #E8673C;
+        }
+        
+        .model-preview {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #232328 0%, #1a1a1e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .model-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .model-card:hover .model-preview img {
+            transform: scale(1.05);
+        }
+        
+        .model-preview::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 30%, rgba(26, 26, 30, 0.95) 100%);
+            z-index: 1;
+        }
+        
+        .preview-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 14px;
+            background: rgba(232, 103, 60, 0.2);
+            border: 1px solid rgba(232, 103, 60, 0.3);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FF7A4D;
+            z-index: 2;
+        }
+        
+        .preview-colors {
+            display: flex;
+            gap: 8px;
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            z-index: 2;
+        }
+        
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .model-content {
+            padding: 28px;
+        }
+        
+        .model-number {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6E6E7A;
+            margin-bottom: 8px;
+        }
+        
+        .model-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .model-description {
+            font-size: 0.9rem;
+            color: #9898A4;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .model-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .tag {
+            padding: 6px 12px;
+            background: #232328;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #D1D1D8;
+        }
+        
+        .model-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E8673C 0%, #FF7A4D 100%);
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(232, 103, 60, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #D1D1D8;
+            border: 1px solid #3D3D45;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #E8673C;
+            color: #E8673C;
+        }
+        
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #232328;
+        }
+        
+        .footer p {
+            font-size: 0.85rem;
+            color: #6E6E7A;
+        }
+        
+        .footer a {
+            color: #E8673C;
+            text-decoration: none;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(232, 103, 60, 0.1) 0%, rgba(255, 122, 77, 0.05) 100%);
+            border: 1px solid rgba(232, 103, 60, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .info-box h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: #FF7A4D;
+        }
+        
+        .info-box p {
+            font-size: 0.9rem;
+            color: #9898A4;
+            line-height: 1.7;
+        }
+        
+        /* Terra colors */
+        .terra-1 { background: #C65D3D; }
+        .terra-2 { background: #FDF8F5; }
+        .terra-3 { background: #3D3733; }
+        
+        /* Serenidade colors */
+        .serenidade-1 { background: #C65D3D; }
+        .serenidade-2 { background: #FBF7F4; }
+        .serenidade-3 { background: #D4DDD7; }
+        
+        /* Aurora colors */
+        .aurora-1 { background: #E8673C; }
+        .aurora-2 { background: #0D0D0F; }
+        .aurora-3 { background: #1A1A1E; }
+        
+        /* Florescer colors */
+        .florescer-1 { background: #C65D3B; }
+        .florescer-2 { background: #8FA68A; }
+        .florescer-3 { background: #D4A84B; }
+        
+        @media (max-width: 768px) {
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .model-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../assets/imgs/psico-leticia-logo.jpeg" alt="Letícia Oliveira - Psicóloga" class="logo">
+            <h1>Modelos de Site</h1>
+            <p class="subtitle">Criamos 4 opções de design profissional para o site da psicóloga Letícia Oliveira. Escolha o modelo que mais combina com sua identidade!</p>
+        </header>
+        
+        <div class="info-box">
+            <h3>💡 Como escolher?</h3>
+            <p>Clique em "Ver Modelo" para visualizar cada opção em tela cheia. Todos os modelos são responsivos (funcionam em celular e desktop), incluem todas as seções necessárias e podem ser personalizados conforme sua preferência.</p>
+        </div>
+        
+        <div class="models-grid">
+            <!-- Modelo 1: Terra -->
+            <div class="model-card">
+                <div class="model-preview">
+                    <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=600&h=375&fit=crop" alt="Ambiente acolhedor tons terrosos">
+                    <span class="preview-badge">Light Mode</span>
+                    <div class="preview-colors">
+                        <div class="color-dot terra-1"></div>
+                        <div class="color-dot terra-2"></div>
+                        <div class="color-dot terra-3"></div>
+                    </div>
+                </div>
+                <div class="model-content">
+                    <span class="model-number">Modelo 01</span>
+                    <h2 class="model-name">Terra</h2>
+                    <p class="model-description">Elegante e minimalista, com tons terrosos inspirados na sua logo. Transmite profissionalismo e acolhimento através de um design sofisticado.</p>
+                    <div class="model-tags">
+                        <span class="tag">Elegante</span>
+                        <span class="tag">Minimalista</span>
+                        <span class="tag">Tons Terrosos</span>
+                    </div>
+                    <div class="model-actions">
+                        <a href="modelo-1-terra/index.html" class="btn btn-primary">Ver Modelo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modelo 2: Serenidade -->
+            <div class="model-card">
+                <div class="model-preview">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=375&fit=crop" alt="Ambiente sereno e calmo">
+                    <span class="preview-badge">Light Mode</span>
+                    <div class="preview-colors">
+                        <div class="color-dot serenidade-1"></div>
+                        <div class="color-dot serenidade-2"></div>
+                        <div class="color-dot serenidade-3"></div>
+                    </div>
+                </div>
+                <div class="model-content">
+                    <span class="model-number">Modelo 02</span>
+                    <h2 class="model-name">Serenidade</h2>
+                    <p class="model-description">Suave e acolhedor, com formas orgânicas e tons pastéis. Perfeito para transmitir calma, conforto e um ambiente seguro para seus pacientes.</p>
+                    <div class="model-tags">
+                        <span class="tag">Acolhedor</span>
+                        <span class="tag">Suave</span>
+                        <span class="tag">Formas Orgânicas</span>
+                    </div>
+                    <div class="model-actions">
+                        <a href="modelo-2-serenidade/index.html" class="btn btn-primary">Ver Modelo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modelo 3: Aurora -->
+            <div class="model-card">
+                <div class="model-preview">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=375&fit=crop" alt="Ambiente moderno escuro">
+                    <span class="preview-badge">Dark Mode</span>
+                    <div class="preview-colors">
+                        <div class="color-dot aurora-1"></div>
+                        <div class="color-dot aurora-2"></div>
+                        <div class="color-dot aurora-3"></div>
+                    </div>
+                </div>
+                <div class="model-content">
+                    <span class="model-number">Modelo 03</span>
+                    <h2 class="model-name">Aurora</h2>
+                    <p class="model-description">Moderno e ousado, com tema escuro e acentos vibrantes. Para uma presença digital contemporânea e marcante que se destaca da concorrência.</p>
+                    <div class="model-tags">
+                        <span class="tag">Moderno</span>
+                        <span class="tag">Dark Mode</span>
+                        <span class="tag">Contemporâneo</span>
+                    </div>
+                    <div class="model-actions">
+                        <a href="modelo-3-aurora/index.html" class="btn btn-primary">Ver Modelo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modelo 4: Florescer -->
+            <div class="model-card">
+                <div class="model-preview">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=375&fit=crop" alt="Flores e natureza">
+                    <span class="preview-badge">Hippie Moderno</span>
+                    <div class="preview-colors">
+                        <div class="color-dot florescer-1"></div>
+                        <div class="color-dot florescer-2"></div>
+                        <div class="color-dot florescer-3"></div>
+                    </div>
+                </div>
+                <div class="model-content">
+                    <span class="model-number">Modelo 04</span>
+                    <h2 class="model-name">Florescer</h2>
+                    <p class="model-description">Orgânico e inovador, com formas fluidas, layout assimétrico e elementos naturais. Um design contemporâneo que conecta crescimento pessoal com natureza.</p>
+                    <div class="model-tags">
+                        <span class="tag">Orgânico</span>
+                        <span class="tag">Inovador</span>
+                        <span class="tag">Natureza</span>
+                    </div>
+                    <div class="model-actions">
+                        <a href="modelo-4-florescer/index.html" class="btn btn-primary">Ver Modelo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>Desenvolvido com ❤️ para Letícia Oliveira - Psicóloga</p>
+            <p style="margin-top: 8px;">Todos os modelos podem ser personalizados conforme necessidade</p>
+        </footer>
+    </div>
+</body>
+</html>
+

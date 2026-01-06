@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing - Criação de Site para Psicólogo(a)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C65D3D;
+            --primary-light: #E8B5A0;
+            --dark: #2A2522;
+            --gray: #6B5F54;
+            --light-gray: #E5D9CF;
+            --cream: #FDF8F5;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .header h1 span {
+            color: var(--primary);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 4px;
+        }
+
+        .progress-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        /* Form Sections */
+        .form-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .section-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .section-description {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 24px;
+            padding: 12px 16px;
+            background: var(--cream);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        label .required {
+            color: var(--primary);
+        }
+
+        label .optional {
+            color: var(--gray);
+            font-weight: 400;
+            font-size: 0.8rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--dark);
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(198, 93, 61, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B5F54' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        /* Checkbox Group */
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--cream);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .checkbox-item:hover {
+            border-color: var(--primary-light);
+        }
+
+        .checkbox-item input {
+            display: none;
+        }
+
+        .checkbox-item input:checked + .checkbox-custom {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .checkbox-item input:checked + .checkbox-custom::after {
+            opacity: 1;
+        }
+
+        .checkbox-item input:checked ~ .checkbox-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .checkbox-custom {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--light-gray);
+            border-radius: 6px;
+            position: relative;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .checkbox-custom::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .checkbox-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        /* Radio Group */
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: var(--cream);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .radio-item:hover {
+            border-color: var(--primary-light);
+        }
+
+        .radio-item input {
+            display: none;
+        }
+
+        .radio-item input:checked + .radio-custom {
+            border-color: var(--primary);
+        }
+
+        .radio-item input:checked + .radio-custom::after {
+            opacity: 1;
+        }
+
+        .radio-item input:checked ~ .radio-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .radio-custom {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--light-gray);
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .radio-custom::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .radio-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        /* Helper Text */
+        .helper-text {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 6px;
+        }
+
+        /* Tip Box */
+        .tip-box {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(198, 93, 61, 0.1) 0%, rgba(232, 181, 160, 0.1) 100%);
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .tip-icon {
+            font-size: 1.25rem;
+        }
+
+        .tip-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, #D97B5C 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(198, 93, 61, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(198, 93, 61, 0.4);
+        }
+
+        .submit-note {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            border-top: 1px solid var(--light-gray);
+            margin-top: 40px;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .form-section {
+                padding: 24px 20px;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+
+            .radio-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Briefing para <span>Criação de Site</span></h1>
+            <p>Preencha as informações abaixo para criarmos um site profissional e personalizado para você. Quanto mais detalhes, melhor será o resultado!</p>
+        </header>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text"><span id="progressText">0</span>% preenchido</p>
+        </div>
+
+        <form id="briefingForm">
+            <!-- Seção 1: Dados Pessoais e Profissionais -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2 class="section-title">Dados Pessoais e Profissionais</h2>
+                </div>
+                <p class="section-description">Informações básicas que aparecerão no seu site e são essenciais para transmitir credibilidade.</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo <span class="required">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Letícia Oliveira" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crp">Número do CRP <span class="required">*</span></label>
+                        <input type="text" id="crp" name="crp" placeholder="Ex: 06/221206" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Como gostaria de ser chamada no site?</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ex: Psicóloga Letícia, Psi. Letícia Oliveira, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="formacao">Formação Acadêmica <span class="required">*</span></label>
+                    <textarea id="formacao" name="formacao" placeholder="Liste suas formações, especializações e cursos relevantes. Ex:&#10;- Psicologia pela USP (2018)&#10;- Especialização em TCC pelo Instituto XYZ (2020)&#10;- Curso de Ansiedade e Depressão..." required></textarea>
+                    <p class="helper-text">Inclua faculdade, ano de formação, especializações e cursos importantes</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia">Tempo de Experiência</label>
+                    <select id="experiencia" name="experiencia">
+                        <option value="">Selecione...</option>
+                        <option value="1-2">1 a 2 anos</option>
+                        <option value="3-5">3 a 5 anos</option>
+                        <option value="5-10">5 a 10 anos</option>
+                        <option value="10+">Mais de 10 anos</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Seção 2: Abordagem e Especialidades -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2 class="section-title">Abordagem e Especialidades</h2>
+                </div>
+                <p class="section-description">Nos conte sobre sua forma de trabalhar e as áreas em que você atua.</p>
+
+                <div class="form-group">
+                    <label>Abordagem Terapêutica Principal <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="abordagem" value="tcc" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">TCC (Terapia Cognitivo-Comportamental)</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="abordagem" value="psicanalise">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Psicanálise</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="abordagem" value="humanista">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Humanista</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="abordagem" value="sistemica">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Sistêmica</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="abordagem" value="outra">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Outra</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="abordagem_outra">Se marcou "Outra", qual? <span class="optional">(opcional)</span></label>
+                    <input type="text" id="abordagem_outra" name="abordagem_outra" placeholder="Ex: Gestalt, EMDR, ACT...">
+                </div>
+
+                <div class="form-group">
+                    <label>Áreas de Atuação / Especialidades <span class="required">*</span></label>
+                    <p class="helper-text" style="margin-bottom: 12px;">Selecione todas as áreas em que você atende</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="ansiedade">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Ansiedade</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="depressao">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Depressão</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="autoestima">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Autoestima</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="relacionamentos">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Relacionamentos</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="estresse">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Estresse / Burnout</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="luto">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Luto</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="fobias">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Fobias / Medos</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="toc">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">TOC</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="transtornos_alimentares">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Transtornos Alimentares</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="autoconhecimento">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Autoconhecimento</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="carreira">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Carreira / Orientação</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="especialidades" value="tdah">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">TDAH</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="outras_especialidades">Outras especialidades <span class="optional">(opcional)</span></label>
+                    <input type="text" id="outras_especialidades" name="outras_especialidades" placeholder="Ex: Terapia de Casal, Perinatal, Neuropsicologia...">
+                </div>
+
+                <div class="form-group">
+                    <label>Público que você atende</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="publico" value="adultos">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Adultos</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="publico" value="adolescentes">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Adolescentes</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="publico" value="criancas">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Crianças</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="publico" value="idosos">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Idosos</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="publico" value="casais">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Casais</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 3: Atendimento -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2 class="section-title">Informações do Atendimento</h2>
+                </div>
+                <p class="section-description">Detalhes práticos sobre como você atende seus pacientes.</p>
+
+                <div class="form-group">
+                    <label>Modalidade de Atendimento <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="modalidade" value="online">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Online (Videochamada)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="modalidade" value="presencial">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Presencial</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="duracao">Duração da Sessão</label>
+                    <select id="duracao" name="duracao">
+                        <option value="">Selecione...</option>
+                        <option value="50">50 minutos</option>
+                        <option value="60">1 hora</option>
+                        <option value="90">1 hora e 30 minutos</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="horarios">Horários de Atendimento</label>
+                    <textarea id="horarios" name="horarios" placeholder="Ex:&#10;Segunda a Sexta: 8h às 20h&#10;Sábados: 8h às 12h"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço do Consultório <span class="optional">(se atende presencial)</span></label>
+                    <textarea id="endereco" name="endereco" placeholder="Ex:&#10;Rua Exemplo, 123 - Sala 45&#10;Bairro - Cidade/UF&#10;CEP: 00000-000"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Deseja informar valores no site?</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="mostrar_valores" value="sim">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Sim, quero mostrar os valores</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="mostrar_valores" value="nao">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Não, prefiro informar por WhatsApp</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="valores">Se sim, quais são os valores? <span class="optional">(opcional)</span></label>
+                    <textarea id="valores" name="valores" placeholder="Ex:&#10;Sessão individual: R$ 200&#10;Primeira consulta: R$ 180&#10;Pacote mensal: R$ 700"></textarea>
+                </div>
+            </section>
+
+            <!-- Seção 4: Contato e Redes Sociais -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">4</span>
+                    <h2 class="section-title">Contato e Redes Sociais</h2>
+                </div>
+                <p class="section-description">Como os pacientes poderão entrar em contato com você.</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp <span class="required">*</span></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Profissional <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="contato@exemplo.com.br" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="instagram">Instagram <span class="optional">(opcional)</span></label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@seu.perfil">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn <span class="optional">(opcional)</span></label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="outras_redes">Outras redes sociais ou links <span class="optional">(opcional)</span></label>
+                    <input type="text" id="outras_redes" name="outras_redes" placeholder="Ex: TikTok, YouTube, Blog, Doctoralia...">
+                </div>
+            </section>
+
+            <!-- Seção 5: Conteúdo do Site -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">5</span>
+                    <h2 class="section-title">Conteúdo do Site</h2>
+                </div>
+                <p class="section-description">Textos e informações que aparecerão nas páginas do seu site.</p>
+
+                <div class="form-group">
+                    <label for="bio">Sua Biografia / Sobre Você <span class="required">*</span></label>
+                    <textarea id="bio" name="bio" placeholder="Escreva um texto contando sobre você, sua trajetória, o que te motivou a ser psicóloga, como você trabalha e o que os pacientes podem esperar do atendimento com você.&#10;&#10;Pode ser informal e pessoal - isso ajuda a criar conexão!&#10;&#10;Ex: 'Sou a Letícia, psicóloga clínica apaixonada por ajudar pessoas a se reconectarem consigo mesmas...'" required style="min-height: 200px;"></textarea>
+                    <p class="helper-text">Dica: Escreva em primeira pessoa e de forma acolhedora. Não precisa ser perfeito, podemos ajustar depois!</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="frase">Frase ou Citação Favorita <span class="optional">(opcional)</span></label>
+                    <input type="text" id="frase" name="frase" placeholder="Ex: 'A mudança começa quando você decide cuidar de si.'">
+                    <p class="helper-text">Uma frase que te representa e pode aparecer no site</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="diferenciais">O que te diferencia? <span class="optional">(opcional)</span></label>
+                    <textarea id="diferenciais" name="diferenciais" placeholder="O que você considera especial no seu atendimento? Ex:&#10;- Acolhimento sem julgamentos&#10;- Técnicas práticas para o dia a dia&#10;- Flexibilidade de horários&#10;- Atendimento humanizado..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="perguntas_frequentes">Perguntas que seus pacientes fazem com frequência <span class="optional">(opcional)</span></label>
+                    <textarea id="perguntas_frequentes" name="perguntas_frequentes" placeholder="Liste perguntas que você costuma receber. Ex:&#10;- Quanto tempo dura o tratamento?&#10;- Como funciona o atendimento online?&#10;- Preciso ter um diagnóstico para iniciar?"></textarea>
+                    <p class="helper-text">Vamos criar uma seção de FAQ com essas perguntas</p>
+                </div>
+            </section>
+
+            <!-- Seção 6: Identidade Visual -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">6</span>
+                    <h2 class="section-title">Identidade Visual e Preferências</h2>
+                </div>
+                <p class="section-description">Nos ajude a entender seu estilo visual e preferências estéticas.</p>
+
+                <div class="form-group">
+                    <label>Você já tem logo?</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="tem_logo" value="sim">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Sim, tenho logo</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="tem_logo" value="nao">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Não tenho logo</span>
+                        </label>
+                    </div>
+                    <p class="helper-text">Se tiver, envie o arquivo da logo por WhatsApp ou e-mail</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Você tem fotos profissionais?</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="tem_fotos" value="sim">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Sim, tenho fotos</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="tem_fotos" value="nao">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Não, vou providenciar</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="tem_fotos" value="usar_banco">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Prefiro usar imagens de banco</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tom de comunicação que você prefere</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="tom" value="acolhedor">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Acolhedor e próximo</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="tom" value="profissional">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Profissional e formal</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="tom" value="equilibrado">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Equilibrado (profissional mas acessível)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferência de cores</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="terrosos">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">🟤 Tons terrosos (marrom, terracota)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="verdes">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">🟢 Verdes / Naturais</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="azuis">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">🔵 Azuis / Calmos</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="neutros">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">⚪ Neutros (bege, cinza)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="pasteis">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">🩷 Pastéis suaves</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="cores" value="escuro">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">⚫ Dark mode (fundo escuro)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="referencias">Sites ou perfis que você admira <span class="optional">(opcional)</span></label>
+                    <textarea id="referencias" name="referencias" placeholder="Cole links de sites de outros profissionais ou perfis que você gosta do visual. Isso nos ajuda a entender seu gosto!"></textarea>
+                </div>
+
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <p class="tip-text"><strong>Dica:</strong> Envie suas fotos e logo por WhatsApp ou e-mail após preencher este formulário. Fotos de boa qualidade fazem toda diferença no resultado final!</p>
+                </div>
+            </section>
+
+            <!-- Seção 7: Informações Adicionais -->
+            <section class="form-section">
+                <div class="section-header">
+                    <span class="section-number">7</span>
+                    <h2 class="section-title">Informações Adicionais</h2>
+                </div>
+
+                <div class="form-group">
+                    <label for="observacoes">Tem algo mais que gostaria de nos contar? <span class="optional">(opcional)</span></label>
+                    <textarea id="observacoes" name="observacoes" placeholder="Informações adicionais, expectativas, dúvidas, ideias específicas para o site..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="prazo">Qual sua expectativa de prazo?</label>
+                    <select id="prazo" name="prazo">
+                        <option value="">Selecione...</option>
+                        <option value="urgente">Urgente (1-2 semanas)</option>
+                        <option value="normal">Normal (2-4 semanas)</option>
+                        <option value="flexivel">Flexível (sem pressa)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Submit -->
+            <div class="submit-section">
+                <button type="submit" class="btn-submit">
+                    Enviar Informações ✨
+                </button>
+                <p class="submit-note">Após enviar, entraremos em contato para alinhar os próximos passos!</p>
+            </div>
+        </form>
+
+        <footer class="footer">
+            <p>Obrigado por confiar em nosso trabalho! 💜</p>
+        </footer>
+    </div>
+
+    <script>
+        // Progress Bar
+        const form = document.getElementById('briefingForm');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+
+        function updateProgress() {
+            const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+            let filled = 0;
+            
+            inputs.forEach(input => {
+                if (input.type === 'radio') {
+                    const name = input.name;
+                    const checked = form.querySelector(`input[name="${name}"]:checked`);
+                    if (checked) filled++;
+                } else if (input.value.trim() !== '') {
+                    filled++;
+                }
+            });
+
+            // Remove duplicates from radio buttons
+            const radioNames = new Set();
+            form.querySelectorAll('input[type="radio"][required]').forEach(r => radioNames.add(r.name));
+            const totalRadios = radioNames.size;
+            const totalOther = form.querySelectorAll('input[required]:not([type="radio"]), textarea[required], select[required]').length;
+            const total = totalRadios + totalOther;
+
+            const percentage = Math.round((filled / total) * 100);
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = percentage;
+        }
+
+        form.addEventListener('input', updateProgress);
+        form.addEventListener('change', updateProgress);
+
+        // Form Submit
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(form);
+            let result = '📋 BRIEFING - CRIAÇÃO DE SITE\n';
+            result += '================================\n\n';
+            
+            for (let [key, value] of formData.entries()) {
+                if (value) {
+                    const label = document.querySelector(`label[for="${key}"]`);
+                    const fieldName = label ? label.textContent.replace('*', '').replace('(opcional)', '').trim() : key;
+                    result += `${fieldName}:\n${value}\n\n`;
+                }
+            }
+
+            // Create downloadable file
+            const blob = new Blob([result], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'briefing-site.txt';
+            a.click();
+
+            alert('✅ Briefing gerado com sucesso!\n\nO arquivo foi baixado. Envie-o por WhatsApp ou e-mail junto com suas fotos e logo.');
+        });
+
+        // Initial progress
+        updateProgress();
+    </script>
+</body>
+</html>
+
